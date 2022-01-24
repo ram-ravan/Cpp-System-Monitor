@@ -106,22 +106,6 @@ long LinuxParser::UpTime() {
   return active_uptime;
 }
 
-// // TODO: Read and return the number of jiffies for the system
-// long LinuxParser::Jiffies() { return 0; }
-
-// // TODO: Read and return the number of active jiffies for a PID
-// // REMOVE: [[maybe_unused]] once you define the function
-// long LinuxParser::ActiveJiffies(int pid[[maybe_unused]]) { return 0; }
-
-// // TODO: Read and return the number of active jiffies for the system
-// long LinuxParser::ActiveJiffies() { return 0; }
-
-// // TODO: Read and return the number of idle jiffies for the system
-// long LinuxParser::IdleJiffies() { return 0; }
-
-// // TODO: Read and return CPU utilization
-// vector<string> LinuxParser::CpuUtilization() { return {}; }
-
 int LinuxParser::TotalProcesses() {
   string line;
   string str1 ("processes");
@@ -174,7 +158,7 @@ string LinuxParser::Ram(int pid) {
     while(std::getline(util_fstream, line)) {
       std::istringstream util_sstream(line);
       while(util_sstream >> key >> value) {
-        if(key == "VmSize:") {
+        if(key == "VmRSS:") { //VmSize corresponds to Virtual Memory Size which is different from the physical RAM Memory. To use physical RAM memory, VmRSS is helpful.
           value_mb = std::stof(value)  * 0.001;
         }
       }
@@ -213,7 +197,7 @@ float LinuxParser::CpuUtilization(int pid) {
     total_time = utime + stime;
     total_time += cutime + cstime;
     seconds = sys_uptime - (starttime / sysconf(_SC_CLK_TCK));
-    cpu_usage = 100 * ((total_time / sysconf(_SC_CLK_TCK)) / seconds); //cpu usage in percentage
+    cpu_usage = ((total_time / sysconf(_SC_CLK_TCK)) / seconds); //cpu usage in percentage
     return cpu_usage;
 }
 

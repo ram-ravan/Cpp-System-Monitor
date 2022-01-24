@@ -26,7 +26,7 @@ float Process::CpuUtilization() {
 
 string Process::Command() { 
     command_ = LinuxParser::Command(Pid());
-    return command_; 
+    return command_.substr(0,50); 
 }
 
 string Process::Ram() {
@@ -40,7 +40,7 @@ string Process::User() {
 }
 
 long int Process::UpTime() {
-    uptime_ = LinuxParser::UpTime(Pid()); 
+    uptime_ =  LinuxParser::UpTime() - LinuxParser::UpTime(Pid()); 
     return uptime_; 
 }
 

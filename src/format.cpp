@@ -1,9 +1,11 @@
 #include <string>
+#include <iomanip>
 
 #include "format.h"
 
 using std::string;
 using std::to_string;
+
 
 // TODO: Complete this helper function
 // INPUT: Long int measuring seconds
@@ -17,6 +19,12 @@ string Format::ElapsedTime(long uptime) {
     uptime %= 60;
     seconds = uptime;
 
-    elapsed_time = to_string(hours) + ":" + to_string(minutes) + ":" + to_string(seconds);
-    return elapsed_time;
+    std::ostringstream stream;
+    stream << std::setw(2) << std::setfill('0') << hours << ":" 
+     << std::setw(2) << std::setfill('0') << minutes << ":"
+     << std::setw(2) << std::setfill('0') << seconds;
+  return stream.str();
+
+    // elapsed_time = to_string(hours) + ":" + to_string(minutes) + ":" + to_string(seconds);
+    // return elapsed_time;
 }
