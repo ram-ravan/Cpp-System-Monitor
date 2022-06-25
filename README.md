@@ -2,7 +2,7 @@
 
 This Linux System Monitor is an inspiration from htop, a popular system monitor. This project code is written in C++ programming language using its Object Oriented Programming features.
 
-![System Monitor](LinuxSystemMonitor.png)
+![System Monitor](SystemMonitor.png)
 
 ## ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
@@ -33,4 +33,4 @@ make
 2. Build the project: `make build`
 
 3. Run the resulting executable: `./build/monitor`
-![System Monitor](LinuxSystemMonitor.png)
+![System Monitor](SystemMonitor.png)
