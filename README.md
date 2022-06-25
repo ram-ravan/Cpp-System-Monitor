@@ -30,7 +30,7 @@ cmake ..
 make
 ```
 
-2. Build the project: `make build`
+3. Build the project: `make build`
 
-3. Run the resulting executable: `./build/monitor`
+4. Run the resulting executable: `./build/monitor`
 ![System Monitor](SystemMonitor.png)
