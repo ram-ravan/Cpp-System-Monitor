@@ -21,13 +21,14 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 1. Clone the project repository: `git clone https://github.com/ram-ravan/Linux-System-Monitor.git`
 
 2. To compile the project, first, create a `build` directory and change to that directory:
-
-            ```mkdir build && cd build ```
-            
-            From within the `build` directory, then run `cmake` and `make` as follows:
-
-                ```cmake ..
-                   make```
+```
+mkdir build && cd build
+```
+From within the `build` directory, then run `cmake` and `make` as follows:
+```
+cmake ..
+make
+```
 
 2. Build the project: `make build`
 
