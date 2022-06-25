@@ -1,6 +1,6 @@
 # Linux-System-Monitor
 
-This Linux System Monitor is an inspiration from htop, a famous system monitor. This project code is solely in C++ programming language using its Object Oriented Programming concepts.
+This Linux System Monitor is an inspiration from htop, a popular system monitor. This project code is written in C++ programming language using its Object Oriented Programming concepts.
 
 ![System Monitor](images/monitor.png)
 
@@ -25,7 +25,9 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
             ```
             mkdir build && cd build
                 ```
+            
             From within the `build` directory, then run `cmake` and `make` as follows:
+
                 ```
                 cmake ..
                 make
