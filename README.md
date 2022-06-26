@@ -1,6 +1,6 @@
 # Linux-System-Monitor
 
-This Linux System Monitor is an inspiration from htop, a popular system monitor. This project code is written in C++ programming language using its Object Oriented Programming features.
+This Linux System Monitor is an inspiration from htop, a popular system monitor. This project code is written in C++ programming language using its Object Oriented Programming features. The [starter code](https://github.com/udacity/CppND-System-Monitor) for this project is provided by Udacity as a part of C++ nanodegree program.
 
 ![System Monitor](SystemMonitor.png)
 
