@@ -33,4 +33,3 @@ make
 3. Build the project: `make build`
 
 4. Run the resulting executable: `./build/monitor`
-![System Monitor](SystemMonitor.png)
